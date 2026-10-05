@@ -1,211 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LITORA - Where Every Voice Becomes a Story</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LITORA | Stories That Stay</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            background: #fff7fb;
-            color: #29202b;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf5;
+      color: #29201d;
+    }
 
-        header {
-            background: white;
-            padding: 18px 22px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #eeeeee;
-        }
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #d94f91;
-            letter-spacing: 2px;
-        }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      color: #7b2948;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin-left: 12px;
-            font-size: 13px;
-        }
+    nav a {
+      text-decoration: none;
+      color: #29201d;
+      margin-left: 18px;
+      font-size: 14px;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 75px 20px;
-            background: linear-gradient(135deg, #fff0f7, #f7eaff);
-        }
+    .hero {
+      padding: 90px 7%;
+      text-align: center;
+      background: linear-gradient(135deg, #fff0f3, #fffaf5);
+    }
 
-        .hero h1 {
-            font-size: 42px;
-            color: #b83272;
-            margin-bottom: 15px;
-        }
+    .hero h1 {
+      font-size: 48px;
+      color: #7b2948;
+      margin-bottom: 18px;
+    }
 
-        .hero p {
-            font-size: 18px;
-            color: #625763;
-            margin-bottom: 30px;
-        }
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #665856;
+    }
 
-        .button {
-            display: inline-block;
-            padding: 13px 23px;
-            margin: 6px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .buttons {
+      margin-top: 30px;
+    }
 
-        .primary {
-            background: #d94f91;
-            color: white;
-        }
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      margin: 7px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .secondary {
-            background: white;
-            color: #d94f91;
-            border: 1px solid #d94f91;
-        }
+    .primary {
+      background: #7b2948;
+      color: white;
+    }
 
-        .section {
-            padding: 45px 20px;
-            text-align: center;
-        }
+    .secondary {
+      border: 1px solid #7b2948;
+      color: #7b2948;
+      background: white;
+    }
 
-        .section h2 {
-            font-size: 28px;
-            margin-bottom: 25px;
-        }
+    section {
+      padding: 60px 7%;
+    }
 
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            max-width: 600px;
-            margin: auto;
-        }
+    .title {
+      text-align: center;
+      font-size: 30px;
+      color: #7b2948;
+      margin-bottom: 35px;
+    }
 
-        .category {
-            background: white;
-            padding: 25px 10px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            font-weight: bold;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
 
-        .category span {
-            display: block;
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
 
-        .about {
-            background: white;
-            padding: 40px 25px;
-            text-align: center;
-        }
+    .card h3 {
+      color: #7b2948;
+      margin-bottom: 12px;
+    }
 
-        .about p {
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.7;
-            color: #625763;
-        }
+    .card p {
+      line-height: 1.6;
+      color: #6b5d59;
+    }
 
-        footer {
-            background: #2d202c;
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
-        }
-    </style>
+    .submit {
+      text-align: center;
+      background: #7b2948;
+      color: white;
+      border-radius: 25px;
+      margin: 30px 7%;
+      padding: 55px 20px;
+    }
+
+    .submit h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .submit p {
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #24191b;
+      color: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
     <div class="logo">LITORA</div>
 
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Stories</a>
-        <a href="#">Writers</a>
+      <a href="#home">Home</a>
+      <a href="#stories">Stories</a>
+      <a href="#writers">Writers</a>
+      <a href="#submit">Submit</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
-    <h1>Every Voice.</h1>
-    <p>Every Story Matters.</p>
-
-    <a href="#" class="button primary">Explore Stories</a>
-    <a href="#" class="button secondary">Submit Your Story</a>
-</section>
-
-<section class="section">
-    <h2>Explore Categories</h2>
-
-    <div class="categories">
-
-        <div class="category">
-            <span>📖</span>
-            Fiction
-        </div>
-
-        <div class="category">
-            <span>❤️</span>
-            Romance
-        </div>
-
-        <div class="category">
-            <span>✨</span>
-            Poetry
-        </div>
-
-        <div class="category">
-            <span>🌙</span>
-            Mystery
-        </div>
-
-        <div class="category">
-            <span>🌱</span>
-            Motivation
-        </div>
-
-        <div class="category">
-            <span>📝</span>
-            Short Stories
-        </div>
-
-    </div>
-</section>
-
-<section class="about">
-
-    <h2>About LITORA</h2>
+  <section class="hero" id="home">
+    <h1>Stories That Stay.</h1>
 
     <p>
-        LITORA is a creative space where writers can share
-        their stories, poems and imagination with readers.
-        Here, every voice has a place and every story has a meaning.
+      Welcome to LITORA — a creative space where writers
+      share their stories, emotions, imagination and words
+      with the world.
     </p>
 
-</section>
+    <div class="buttons">
+      <a href="#stories" class="btn primary">Explore Stories</a>
+      <a href="#submit" class="btn secondary">Submit Your Story</a>
+    </div>
+  </section>
 
-<footer>
-    <p>© 2026 LITORA — Where Every Voice Becomes a Story.</p>
-</footer>
+  <section id="stories">
+    <h2 class="title">Featured Stories</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Short Stories</h3>
+        <p>
+          Discover beautiful short stories written by
+          emerging writers.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Poetry</h3>
+        <p>
+          Words, emotions and thoughts transformed into poetry.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Novels</h3>
+        <p>
+          Explore original fiction and long-form stories
+          from new voices.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Emotional Stories</h3>
+        <p>
+          Stories that touch the heart and stay in your thoughts.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="writers">
+    <h2 class="title">For Writers</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>New Writers</h3>
+        <p>
+          A platform for emerging writers to introduce
+          their work and build their identity.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Writer Profiles</h3>
+        <p>
+          Create your own writer identity and let readers
+          discover your work.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Creative Community</h3>
+        <p>
+          Connect with readers and other people who love
+          stories and writing.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="submit" id="submit">
+    <h2>Have a Story to Tell?</h2>
+
+    <p>
+      Your words deserve to be heard.
+      Submit your story to LITORA.
+    </p>
+
+    <a href="mailto:litoraofficial@gmail.com"
+       class="btn secondary">
+      Submit Your Story
+    </a>
+  </section>
+
+  <footer>
+    © 2026 LITORA — Stories That Stay.
+  </footer>
 
 </body>
-  </html>
+</html>
